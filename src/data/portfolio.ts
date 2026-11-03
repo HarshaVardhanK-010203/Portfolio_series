@@ -1,70 +1,74 @@
 /**
- * Central portfolio data — generated from Sushmita's resume (Sushmita_dasari.pdf).
- * Every fact on the site comes from this file. Update it here and the whole site follows.
- * Nothing here should be added unless it appears on the resume.
+ * Central portfolio data — personalized for Harsha Vardhan K.
+ * Facts below are based on the supplied resume. Keep claims and metrics verifiable.
  */
 
 export type Palette = { from: string; via: string; to: string; accent: string };
 
 export const profile = {
-  fullName: 'Dasari Venkata Ratna Sri Sushmita',
-  displayName: 'Sushmita Dasari',
-  firstName: 'SUSHMITA',
+  fullName: 'Harsha Vardhan K',
+  displayName: 'Harsha Vardhan',
+  firstName: 'HARSHA',
   seriesTag: 'THE SERIES',
-  /** Fictional studio card shown at the very start of the opening sequence. */
-  originalLabel: 'A DASARI ORIGINAL',
-  role: 'Full-Stack Developer',
-  tagline: ['Full-Stack Developer', 'AI / ML', 'Java'],
-  intro:
-    'A B.Tech Artificial Intelligence & Machine Learning student (CGPA 9.10) and full-stack developer building AI-powered platforms, payment systems and multi-tenant SaaS with Java, Python, React, Node.js and Docker.',
-  location: 'Surampalem, Andhra Pradesh',
-  email: 'sushmitadasari17@gmail.com',
+  originalLabel: 'A HARSHA ORIGINAL',
+  role: 'Computer Science Undergraduate',
+  tagline: ['Software Developer', 'Java', 'IoT & Embedded Systems'],
+  intro: 'B.Tech Computer Science and Engineering student at Mohan Babu University. Interested in software development, IoT, and cybersecurity, with hands-on project work in student platforms and energy analysis.',
+  location: 'Visakhapatnam, Andhra Pradesh, India',
+  email: 'harshavardhankallempudi@hotmail.com',
   links: {
-    linkedin: 'https://www.linkedin.com/in/sushmita-dasari-227a40284/',
-    github: 'https://github.com/Sushmitadasari',
+    linkedin: 'https://www.linkedin.com/in/harsha-vardhan-k01',
+    github: 'https://github.com/HarshaVardhanK-0102',
   },
-  resumePdf: '/assets/Sushmita_Dasari_Resume.pdf',
+  resumePdf: '/assets/Harsha-Resume.pdf',
   portrait: {
-    src: '/assets/portrait-720.webp',
-    srcSet: '/assets/portrait-420.webp 420w, /assets/portrait-720.webp 720w, /assets/portrait-1100.webp 1100w',
-    alt: 'Portrait of Sushmita Dasari',
+    src: '/assets/harsha-profile.jpg',
+    srcSet: '/assets/harsha-profile.jpg',
+    alt: 'Portrait of Harsha Vardhan K',
   },
-  interests: ['System Design', 'Cloud Computing (AWS)', 'Machine Learning'],
+  interests: ['Data Structures & Algorithms', 'Cybersecurity', 'IoT and Embedded Systems'],
 };
 
 export const education = [
   {
-    school: 'Aditya Engineering College',
-    place: 'Surampalem',
-    degree: 'Bachelor of Technology — Artificial Intelligence and Machine Learning',
-    period: 'October 2023 – Present',
-    score: 'CGPA 9.10',
+    school: 'Mohan Babu University',
+    place: 'Tirupati, Andhra Pradesh',
+    degree: 'B.Tech — Computer Science and Engineering',
+    period: '2024 – 2028',
+    score: 'CGPA 8.01 / 10',
   },
   {
-    school: 'Sri Chaitanya Junior College',
-    place: 'Kakinada',
-    degree: 'BIEAP — MPC',
-    period: 'June 2021 – May 2023',
-    score: 'Score 925/1000',
+    school: 'Tirumala Junior College',
+    place: 'Andhra Pradesh',
+    degree: 'Intermediate — BIEAP',
+    period: '2024',
+    score: '83%',
+  },
+  {
+    school: 'De Paul E.M. School',
+    place: 'Andhra Pradesh',
+    degree: 'ICSE',
+    period: '2022',
+    score: '80%',
   },
 ];
 
 export const experience = [
   {
-    company: 'Technical Hub Pvt Ltd',
-    role: 'Trainee',
-    place: 'Surampalem, AP',
-    period: 'May 2025 – June 2026',
+    company: 'Mohan Babu University',
+    role: 'Intern — Smart Energy Audit & Tariff Analysis',
+    place: 'Tirupati, Andhra Pradesh',
+    period: 'March 2025',
     points: [
-      'Completed one year of intensive Full-Stack Development (FSD) training covering frontend, backend, database integration, and deployment workflows.',
-      'Developed responsive and functional web applications by implementing user interfaces, server-side logic, and database connectivity.',
-      'Deployed and managed web applications while applying version control, debugging, and end-to-end development practices.',
+      'Surveyed and classified 1,000+ appliances across four floors, recording power ratings and usage patterns for a building energy audit.',
+      'Built a Java-based model to calculate monthly and yearly energy consumption, billing costs, and load, demand, and utilization metrics.',
+      'Analyzed tariff structures and documented the methodology and findings.',
+      'Coordinated data collection, analysis, and reporting across the audited floors.',
     ],
   },
 ];
 
 export type Metric = { value: string; label: string };
-
 export type Project = {
   id: string;
   title: string;
@@ -75,7 +79,6 @@ export type Project = {
   build: string[];
   features: string[];
   metrics: Metric[];
-  /** Omit when the repository isn't public — the GitHub button is hidden instead of linking to a 404. */
   github?: string;
   palette: Palette;
   motif: 'shield' | 'flow' | 'tenants';
@@ -83,89 +86,68 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'policyguard-ai',
-    title: 'PolicyGuard AI',
-    year: '2026',
-    genre: 'AI • NLP • LLM',
-    logline: 'An AI-powered policy analysis platform across web, browser extension, mobile and desktop applications.',
-    stack: ['Python', 'NLP', 'LLM', 'REST API'],
+    id: 'campusconnect',
+    title: 'CampusConnect',
+    year: 'In Progress',
+    genre: 'Full-Stack • Student Platform',
+    logline: 'A centralized student platform connecting students with placements, clubs, events, question banks, and opportunities.',
+    stack: ['React', 'Node.js', 'Express.js', 'MySQL', 'Firebase'],
     build: [
-      'Built an AI-powered policy analysis platform across web, browser extension, mobile, and desktop applications, processing 500+ policy documents with 92% accuracy and reducing manual review time by 60% across 8 policy categories.',
-      'Engineered LLM-based Q&A, key-information extraction, and REST API integration for 10+ document types, enabling real-time policy insights and reducing decision turnaround time by 45%.',
+      'Working on a multi-role platform for students, administrators, and club-event coordinators.',
+      'Developing authentication, access control, student profiles, and skill-based teammate matching.',
     ],
     features: [
-      'LLM-based Q&A over policy documents',
-      'Key-information extraction',
-      'REST API integration for 10+ document types',
-      'Web, browser extension, mobile & desktop apps',
-      'Real-time policy insights',
+      'Student and admin role flows',
+      'Student profiles',
+      'Clubs, events, and opportunities',
+      'Skill-based teammate matching',
     ],
-    metrics: [
-      { value: '500+', label: 'policy documents processed' },
-      { value: '92%', label: 'accuracy' },
-      { value: '60%', label: 'less manual review time' },
-      { value: '45%', label: 'faster decision turnaround' },
-      { value: '8', label: 'policy categories' },
-    ],
-    // The resume links to https://github.com/Sushmitadasari/PolicyGuard-AI, which is not public yet (404).
-    // Add `github: 'https://github.com/Sushmitadasari/PolicyGuard-AI',` back once the repo is public.
-    palette: { from: '#2a0610', via: '#7a0f24', to: '#0b0710', accent: '#ff3d5a' },
-    motif: 'shield',
-  },
-  {
-    id: 'payment-gateway',
-    title: 'Payment Gateway System',
-    year: '2026',
-    genre: 'Full-Stack • Fintech • Microservices',
-    logline: 'A full-stack UPI & card payment gateway built around a strict payment state machine.',
-    stack: ['Node.js', 'Express', 'PostgreSQL', 'React', 'Docker'],
-    build: [
-      'Built full-stack UPI & card payment gateway processing 1,000+ transactions at 99.8% uptime with a strict payment state machine (processing → success/failed).',
-      'Dockerized microservice architecture cut deployment setup by 70%; backend optimizations reduced API response time by 40% and tripled throughput under load.',
-    ],
-    features: [
-      'UPI & card payments',
-      'Strict payment state machine (processing → success / failed)',
-      'Dockerized microservice architecture',
-      'Backend optimizations for load',
-    ],
-    metrics: [
-      { value: '1,000+', label: 'transactions processed' },
-      { value: '99.8%', label: 'uptime' },
-      { value: '70%', label: 'less deployment setup' },
-      { value: '40%', label: 'faster API response' },
-      { value: '3×', label: 'throughput under load' },
-    ],
-    github: 'https://github.com/Sushmitadasari/Payment-gateway-system-Project',
-    palette: { from: '#1a0d02', via: '#8a4a07', to: '#0a0806', accent: '#ffb547' },
+    metrics: [],
+    palette: { from: '#04121f', via: '#0f4c6e', to: '#05080d', accent: '#4cc9ff' },
     motif: 'flow',
   },
   {
-    id: 'multi-tenant-saas',
-    title: 'Multi-Tenant SaaS Platform',
-    year: '2026',
-    genre: 'SaaS • Security • DevOps',
-    logline: 'Shared-database multi-tenancy with strict tenant isolation and 4-level JWT/RBAC.',
-    stack: ['Node.js', 'React', 'PostgreSQL', 'Docker Compose'],
+    id: 'energy-audit',
+    title: 'Beyond the Plug: A Power Study',
+    year: '2025',
+    genre: 'Java • Energy Analytics',
+    logline: 'A Java-based model for building electricity consumption and tariff analysis.',
+    stack: ['Java', 'Energy Audit', 'Data Analysis'],
     build: [
-      'Architected shared-database multi-tenancy for 50+ concurrent tenants with strict tenant_id isolation and 4-level JWT/RBAC, achieving zero unauthorized-access incidents across 200+ users.',
-      'Implemented Docker Compose one-command deployment, reducing environment setup time from 45 minutes to under 2 minutes.',
+      'Audited appliance loads and usage patterns across four floors of a university building.',
+      'Developed calculations for energy consumption, billing, and electrical load metrics.',
     ],
     features: [
-      'Shared-database multi-tenancy',
-      'Strict tenant_id isolation',
-      '4-level JWT / RBAC',
-      'One-command Docker Compose deployment',
+      'Monthly and yearly energy estimates',
+      'Tariff-based bill calculation',
+      'Load, demand, and utilization metrics',
     ],
     metrics: [
-      { value: '50+', label: 'concurrent tenants' },
-      { value: '200+', label: 'users' },
-      { value: '0', label: 'unauthorized-access incidents' },
-      { value: '45m → <2m', label: 'environment setup time' },
+      { value: '1,000+', label: 'appliances surveyed' },
+      { value: '4', label: 'floors audited' },
     ],
-    github: 'https://github.com/Sushmitadasari/Multi-Tenant-SaaS-Platform',
-    palette: { from: '#04121f', via: '#0f4c6e', to: '#05080d', accent: '#4cc9ff' },
+    palette: { from: '#1a0d02', via: '#8a4a07', to: '#0a0806', accent: '#ffb547' },
     motif: 'tenants',
+  },
+  {
+    id: 'output-prediction',
+    title: 'AI/ML & Data Analytics — Output Prediction',
+    year: 'Idea / Planning',
+    genre: 'AI • ML • Data Analytics',
+    logline: 'An early-stage study exploring output prediction across multiple data types.',
+    stack: ['Python', 'Machine Learning', 'Data Analytics'],
+    build: [
+      'Scoping an output-prediction problem across structured, image, text, time-series, and financial data.',
+      'Working on early data collection, feature selection, and research-methodology planning.',
+    ],
+    features: [
+      'Problem scoping',
+      'Data collection planning',
+      'Feature selection research',
+    ],
+    metrics: [],
+    palette: { from: '#120822', via: '#3d1a6e', to: '#07060c', accent: '#b98bff' },
+    motif: 'shield',
   },
 ];
 
@@ -180,62 +162,43 @@ export type Achievement = {
 
 export const achievements: Achievement[] = [
   {
-    id: 'algouniversity',
-    title: 'Tech Fellow',
-    org: 'AlgoUniversity',
-    detail: 'Selected through competitive national selection — advanced DSA, algorithm optimization, and competitive coding.',
-    laurel: 'National Selection',
+    id: 'project-expo',
+    title: '2nd Place',
+    org: 'Project Expo — Technovation 2K25',
+    detail: 'Secured second place at the project expo hosted by KSRM College of Engineering in 2025.',
+    laurel: '2nd Place · 2025',
   },
   {
-    id: 'flipkart-grid',
-    title: 'Semi-Finalist',
-    org: 'Flipkart GRiD 7.0',
-    detail: 'Competed among top national engineering talent.',
-    laurel: 'Semi-Finalist',
-    link: 'https://drive.google.com/file/d/16pXA2hssyJqlYMr27wfi6U4bjKDLvh9f/view?usp=drive_link',
+    id: 'student-coordinator',
+    title: 'Student Coordinator',
+    org: 'Mohan Babu University',
+    detail: 'Coordinated academic activities, events, and feedback for 500+ students.',
+    laurel: 'Leadership',
   },
   {
-    id: 'branch-topper',
-    title: 'AIML Branch Topper',
-    org: 'B.Tech AI & ML',
-    detail: '9.24 SGPA for the semester.',
-    laurel: 'Branch Topper',
+    id: 'hackathon',
+    title: 'Hackathon Participant',
+    org: 'College Hackathon',
+    detail: 'Participated in a college-level hackathon.',
+    laurel: 'Innovation',
   },
   {
-    id: 'competitive-coding',
-    title: '850+ Problems Solved',
-    org: 'LeetCode • GFG • CodeChef',
-    detail: 'LeetCode: 350+ DSA problems (peak rating 1442). GFG: 300+ problems (rating 1436). CodeChef: 200+ problems.',
-    laurel: 'Competitive Coding',
-  },
-  {
-    id: 'hackerrank',
-    title: '5-Star Badges',
-    org: 'HackerRank',
-    detail: '5-star badges in C, Python, Java, and SQL.',
-    laurel: 'Four Languages',
+    id: 'team-lead',
+    title: 'Technical / Team Lead',
+    org: 'Academic Project Teams',
+    detail: 'Contributed to technical leadership and team coordination in project work.',
+    laurel: 'Team Leadership',
   },
 ];
 
 export type Certification = { issuer: string; name: string; link: string };
 
 export const certifications: Certification[] = [
-  { issuer: 'NPTEL', name: 'Database Management System', link: 'https://drive.google.com/file/d/1MqkJHchXeaGD4S8mzPmEGxEYddAsxAjN/view?usp=drive_link' },
-  { issuer: 'NPTEL', name: 'Fundamentals of Artificial Intelligence', link: 'https://drive.google.com/file/d/1GqyUQ-lrE-bHaN457t6fIdssgGG4HMXf/view?usp=drive_link' },
-  { issuer: 'NPTEL', name: 'Deep Learning', link: 'https://drive.google.com/file/d/1PWSRP5SQDPzkoTCF3A24eIJoSpTwgsff/view?usp=sharing' },
-  { issuer: 'AWS', name: 'AWS Certified AI Practitioner', link: 'https://drive.google.com/file/d/1h8e5p0a9T6f5gBaOP2ROfwWHZfkkspGn/view?usp=drive_link' },
-  { issuer: 'AWS', name: 'AWS Academy Graduate – Cloud Foundations', link: 'https://www.credly.com/badges/2d4810f9-3dbe-444d-99b9-61312ea5e7df/public_url' },
-  { issuer: 'MongoDB', name: 'MongoDB Certified Associate Developer', link: 'https://www.credly.com/badges/fd3362bd-743a-4c4d-a68e-b1fdc5d46811/public_url' },
-  { issuer: 'GitHub', name: 'GitHub Foundations', link: 'https://drive.google.com/file/d/1o0fkCAMRWTg1oMwxlqu6t6wnOpBv66Vq/view?usp=sharing' },
-  { issuer: 'Pearson', name: 'IT Specialist – HTML and CSS', link: 'https://www.credly.com/badges/e4a55298-e396-41d8-a032-283aafe9fab7/public_url' },
-  { issuer: 'Oracle', name: 'Java Certified Foundations Associate', link: 'https://drive.google.com/file/d/1g-yyceHtLg_k2RWiOIJqH0MMcGlaH90P/view?usp=sharing' },
-  { issuer: 'Oracle', name: 'Oracle Certified Foundations Associate – Database', link: 'https://drive.google.com/file/d/10-DzabbcH2vHrI6bAohoT8czKRZMa2kV/view?usp=drive_link' },
-  { issuer: 'Cisco', name: 'HTML Essentials', link: 'https://www.credly.com/badges/eb27ca95-3b2a-4948-bef9-0385d1d49055/public_url' },
-  { issuer: 'Cisco', name: 'CSS Essentials', link: 'https://www.credly.com/badges/3b37497f-6a61-4889-af3c-ed337a460a0b/public_url' },
-  { issuer: 'Cisco', name: 'JavaScript Essentials 1', link: 'https://www.credly.com/badges/9cdd4d55-6ecc-463f-b254-811ccdd0539c/public_url' },
-  { issuer: 'Cisco', name: 'JavaScript Essentials 2', link: 'https://www.credly.com/badges/0e1b036e-4318-4c8e-b750-2aca77314442/public_url' },
-  { issuer: 'Cisco', name: 'Python Essentials 1', link: 'https://www.credly.com/badges/0e21e3eb-d8ef-4770-95d7-dcbd6f8696b1/public_url' },
-  { issuer: 'Udemy', name: 'Microsoft Azure Hands-On Training (AZ-900, AZ-104, AZ-305)', link: 'https://drive.google.com/file/d/1KrXClhY0nJ3Acxs7DioNf4Q1rpaMvgPT/view?usp=sharing' },
+  { issuer: 'Northeastern University', name: 'Agile Development & Scrum', link: '' },
+  { issuer: 'SkillUp', name: 'Scrum Master Courses', link: '' },
+  { issuer: 'IBM', name: 'Introduction to Agile Development and Scrum', link: '' },
+  { issuer: 'University of Illinois Urbana-Champaign', name: 'Entrepreneurship II: Preparing for Launch', link: '' },
+  { issuer: 'University of Illinois Urbana-Champaign', name: 'Strategic Innovation: Managing Innovation Initiatives', link: '' },
 ];
 
 export type Skill = { name: string; mono: string; note?: string };
@@ -244,111 +207,85 @@ export type SkillCategory = { id: string; title: string; subtitle: string; skill
 export const skillCategories: SkillCategory[] = [
   {
     id: 'languages',
-    title: 'Languages',
-    subtitle: 'Java is the primary language',
+    title: 'Programming Languages',
+    subtitle: 'Languages used in coursework and projects',
     skills: [
-      { name: 'Java', mono: 'Jv', note: 'Primary' },
-      { name: 'Python', mono: 'Py' },
-      { name: 'C', mono: 'C' },
+      { name: 'Java', mono: 'Jv', note: 'Interview language' },
       { name: 'C++', mono: 'C+' },
+      { name: 'Python', mono: 'Py' },
     ],
   },
   {
-    id: 'frontend',
-    title: 'Frontend',
-    subtitle: 'Interfaces & the web platform',
+    id: 'web',
+    title: 'Web / Full-Stack',
+    subtitle: 'Frontend and backend technologies',
     skills: [
-      { name: 'React', mono: 'Re' },
       { name: 'HTML', mono: 'Ht' },
       { name: 'CSS', mono: 'Cs' },
       { name: 'JavaScript', mono: 'Js' },
-    ],
-  },
-  {
-    id: 'backend',
-    title: 'Backend',
-    subtitle: 'Server-side logic',
-    skills: [
+      { name: 'React', mono: 'Re' },
       { name: 'Node.js', mono: 'No' },
       { name: 'Express.js', mono: 'Ex' },
     ],
   },
   {
-    id: 'infra',
-    title: 'Infra & Tools',
-    subtitle: 'Shipping & architecture',
-    skills: [
-      { name: 'Docker', mono: 'Dk' },
-      { name: 'Docker Compose', mono: 'Dc' },
-      { name: 'REST APIs', mono: 'Ap' },
-      { name: 'Microservices', mono: 'Ms' },
-      { name: 'JWT Auth', mono: 'Jw' },
-      { name: 'Git / GitHub', mono: 'Gt' },
-      { name: 'Postman', mono: 'Pm' },
-    ],
-  },
-  {
     id: 'databases',
     title: 'Databases',
-    subtitle: 'Indexing • Normalization',
+    subtitle: 'Data storage and application backends',
     skills: [
-      { name: 'PostgreSQL', mono: 'Pg' },
-      { name: 'MongoDB', mono: 'Mg' },
       { name: 'MySQL', mono: 'My' },
+      { name: 'Firebase', mono: 'Fb' },
     ],
   },
   {
     id: 'fundamentals',
     title: 'CS Fundamentals',
-    subtitle: 'The foundations',
+    subtitle: 'Core computer science subjects',
     skills: [
       { name: 'DSA', mono: 'Ds' },
-      { name: 'OS', mono: 'Os' },
-      { name: 'CN', mono: 'Cn' },
+      { name: 'OOP', mono: 'Oo' },
       { name: 'DBMS', mono: 'Db' },
-      { name: 'OOPs', mono: 'Oo' },
-      { name: 'Collections', mono: 'Co' },
-      { name: 'Multithreading', mono: 'Mt' },
+      { name: 'Operating Systems', mono: 'Os' },
+      { name: 'Computer Networks', mono: 'Cn' },
+      { name: 'Software Engineering', mono: 'Se' },
     ],
   },
   {
-    id: 'interests',
-    title: 'Interests',
-    subtitle: 'Coming soon to the series',
+    id: 'iot',
+    title: 'IoT / Embedded',
+    subtitle: 'Hardware and connected systems',
     skills: [
-      { name: 'System Design', mono: 'Sd' },
-      { name: 'Cloud Computing (AWS)', mono: 'Aw' },
-      { name: 'Machine Learning', mono: 'Ml' },
+      { name: 'ESP32', mono: 'E3' },
+      { name: 'Raspberry Pi', mono: 'Rp' },
+      { name: 'Sensor Integration', mono: 'Si' },
+    ],
+  },
+  {
+    id: 'tools',
+    title: 'Tools & Platforms',
+    subtitle: 'Development workflow',
+    skills: [
+      { name: 'Git / GitHub', mono: 'Gt' },
+      { name: 'VS Code', mono: 'Vs' },
+      { name: 'Linux / Ubuntu', mono: 'Li' },
+      { name: 'PyCharm', mono: 'Pc' },
+      { name: 'Excel', mono: 'Xl' },
     ],
   },
 ];
 
-/**
- * Factual cross-references shown when a skill card is hovered/tapped:
- * where the skill appears in the projects, certifications or achievements on the resume.
- */
 export const skillEvidence: Record<string, string[]> = {
-  Java: ['Oracle Java Certified Foundations Associate', 'HackerRank 5-star'],
-  Python: ['PolicyGuard AI', 'Cisco Python Essentials 1', 'HackerRank 5-star'],
-  C: ['HackerRank 5-star'],
-  React: ['Payment Gateway System', 'Multi-Tenant SaaS Platform'],
-  HTML: ['Pearson IT Specialist – HTML and CSS', 'Cisco HTML Essentials'],
-  CSS: ['Pearson IT Specialist – HTML and CSS', 'Cisco CSS Essentials'],
-  JavaScript: ['Cisco JavaScript Essentials 1 & 2'],
-  'Node.js': ['Payment Gateway System', 'Multi-Tenant SaaS Platform'],
-  'Express.js': ['Payment Gateway System'],
-  Docker: ['Payment Gateway System'],
-  'Docker Compose': ['Multi-Tenant SaaS Platform'],
-  'REST APIs': ['PolicyGuard AI'],
-  Microservices: ['Payment Gateway System'],
-  'JWT Auth': ['Multi-Tenant SaaS Platform'],
-  'Git / GitHub': ['GitHub Foundations'],
-  PostgreSQL: ['Payment Gateway System', 'Multi-Tenant SaaS Platform'],
-  MongoDB: ['MongoDB Certified Associate Developer'],
-  DBMS: ['NPTEL Database Management System', 'Oracle Database Foundations'],
-  DSA: ['AlgoUniversity Tech Fellow', '850+ problems solved'],
-  'Cloud Computing (AWS)': ['AWS Certified AI Practitioner', 'AWS Academy Cloud Foundations'],
-  'Machine Learning': ['B.Tech AI & ML', 'NPTEL Deep Learning'],
+  Java: ['Smart Energy Audit & Tariff Analysis'],
+  React: ['CampusConnect'],
+  'Node.js': ['CampusConnect'],
+  'Express.js': ['CampusConnect'],
+  MySQL: ['CampusConnect'],
+  Firebase: ['CampusConnect'],
+  Python: ['AI/ML & Data Analytics — Output Prediction'],
+  ESP32: ['IoT / Embedded Systems'],
+  'Git / GitHub': ['Development tools'],
+  DSA: ['Technical skills'],
+  DBMS: ['Technical skills'],
 };
 
 export type Episode = {
@@ -377,130 +314,33 @@ const jade: Palette = { from: '#03150f', via: '#0d5a40', to: '#050a08', accent: 
 export const seasons: Season[] = [
   {
     number: 1,
-    title: 'The Beginning',
-    period: '2021 – 2023',
-    synopsis: 'Intermediate years at Sri Chaitanya Junior College, Kakinada — Mathematics, Physics and Chemistry.',
+    title: 'The Foundation',
+    period: '2022 – 2024',
+    synopsis: 'School and intermediate education, building the academic foundation.',
     episodes: [
-      {
-        code: 'S01 E01',
-        title: 'The Foundation',
-        description: 'BIEAP, MPC at Sri Chaitanya Junior College, Kakinada — finishing with a score of 925/1000.',
-        tags: ['MPC', 'BIEAP'],
-        runtime: 'Jun 2021 – May 2023',
-        palette: amber,
-      },
+      { code: 'S01 E01', title: 'The Student', description: 'ICSE at De Paul E.M. School — 80%.', tags: ['ICSE'], runtime: '2022', palette: amber },
+      { code: 'S01 E02', title: 'The Next Step', description: 'BIEAP Intermediate at Tirumala Junior College — 83%.', tags: ['BIEAP'], runtime: '2024', palette: violet },
     ],
   },
   {
     number: 2,
-    title: 'Enter: AI & ML',
-    period: '2023 – Present',
-    synopsis: 'B.Tech in Artificial Intelligence and Machine Learning at Aditya Engineering College, Surampalem.',
+    title: 'Computer Science',
+    period: '2024 – 2028',
+    synopsis: 'B.Tech Computer Science and Engineering at Mohan Babu University.',
     episodes: [
-      {
-        code: 'S02 E01',
-        title: 'The Engineer',
-        description: 'Bachelor of Technology in Artificial Intelligence and Machine Learning — CGPA 9.10.',
-        tags: ['B.Tech', 'AI & ML', 'CGPA 9.10'],
-        runtime: 'Oct 2023 – Present',
-        palette: violet,
-      },
-      {
-        code: 'S02 E02',
-        title: 'The Topper',
-        description: 'AIML Branch Topper with a 9.24 SGPA for the semester.',
-        tags: ['9.24 SGPA', 'Branch Topper'],
-        runtime: 'One semester',
-        palette: crimson,
-      },
-      {
-        code: 'S02 E03',
-        title: 'The Problem Solver',
-        description: 'LeetCode 350+ (peak 1442), GFG 300+ (1436), CodeChef 200+ and HackerRank 5-star badges in C, Python, Java and SQL.',
-        tags: ['DSA', 'LeetCode', 'GFG', 'CodeChef', 'HackerRank'],
-        runtime: '850+ problems',
-        palette: jade,
-      },
+      { code: 'S02 E01', title: 'The Engineer', description: 'B.Tech CSE, CGPA 8.01 / 10.', tags: ['B.Tech', 'CSE'], runtime: '2024 – 2028', palette: ocean },
+      { code: 'S02 E02', title: 'The Coordinator', description: 'Student Coordinator supporting academic activities and events for 500+ students.', tags: ['Leadership'], runtime: 'University', palette: jade },
     ],
   },
   {
     number: 3,
-    title: 'Learning to Build',
-    period: '2025 – 2026',
-    synopsis: 'One year of intensive Full-Stack Development training as a Trainee at Technical Hub Pvt Ltd.',
+    title: 'Building & Learning',
+    period: '2025 – Present',
+    synopsis: 'Energy analysis, student platforms, and project-based learning.',
     episodes: [
-      {
-        code: 'S03 E01',
-        title: 'The Trainee',
-        description: 'Intensive Full-Stack Development training covering frontend, backend, database integration and deployment workflows.',
-        tags: ['FSD', 'Frontend', 'Backend', 'Databases'],
-        runtime: 'May 2025 – Jun 2026',
-        palette: ocean,
-      },
-      {
-        code: 'S03 E02',
-        title: 'The Developer',
-        description: 'Developed responsive web applications — user interfaces, server-side logic and database connectivity.',
-        tags: ['React', 'Node.js', 'Express.js'],
-        runtime: 'Technical Hub',
-        palette: violet,
-      },
-      {
-        code: 'S03 E03',
-        title: 'The Deployer',
-        description: 'Deployed and managed web applications with version control, debugging and end-to-end development practices.',
-        tags: ['Git / GitHub', 'Deployment'],
-        runtime: 'Technical Hub',
-        palette: jade,
-      },
-    ],
-  },
-  {
-    number: 4,
-    title: 'Building Real Products',
-    period: '2026',
-    synopsis: 'Three Originals — an AI platform, a payment gateway and a multi-tenant SaaS — plus national-level recognition.',
-    episodes: [
-      {
-        code: 'S04 E01',
-        title: 'The AI Builder',
-        description: 'PolicyGuard AI — LLM-based Q&A and key-information extraction across 500+ policy documents at 92% accuracy.',
-        tags: ['Python', 'NLP', 'LLM'],
-        runtime: '2026',
-        palette: crimson,
-      },
-      {
-        code: 'S04 E02',
-        title: 'The Architect',
-        description: 'Payment Gateway System and Multi-Tenant SaaS Platform — state machines, microservices, tenant isolation and RBAC.',
-        tags: ['Node.js', 'PostgreSQL', 'Docker'],
-        runtime: '2026',
-        palette: amber,
-      },
-      {
-        code: 'S04 E03',
-        title: 'The Fellow',
-        description: 'Selected as a Tech Fellow at AlgoUniversity and reached the Semi-Finals of Flipkart GRiD 7.0.',
-        tags: ['AlgoUniversity', 'Flipkart GRiD 7.0'],
-        runtime: 'National stage',
-        palette: ocean,
-      },
-    ],
-  },
-  {
-    number: 5,
-    title: "What's Next",
-    period: 'Now streaming',
-    synopsis: 'The interests on the resume point to the next arc of the story.',
-    episodes: [
-      {
-        code: 'S05 E01',
-        title: 'The Next Chapter',
-        description: 'Exploring System Design, Cloud Computing (AWS) and Machine Learning.',
-        tags: ['System Design', 'AWS', 'Machine Learning'],
-        runtime: 'In production',
-        palette: violet,
-      },
+      { code: 'S03 E01', title: 'Beyond the Plug', description: 'Java-based building energy audit and tariff analysis.', tags: ['Java', 'Energy'], runtime: 'March 2025', palette: amber },
+      { code: 'S03 E02', title: 'CampusConnect', description: 'A multi-role platform for student opportunities, clubs, and events.', tags: ['React', 'Node.js'], runtime: 'In Progress', palette: ocean },
+      { code: 'S03 E03', title: 'The Recognition', description: 'Second place at Technovation 2K25 Project Expo.', tags: ['Project Expo'], runtime: '2025', palette: crimson },
     ],
   },
 ];
@@ -508,59 +348,22 @@ export const seasons: Season[] = [
 export type TopPick = { label: string; title: string; detail: string; palette: Palette };
 
 export const topPicks: TopPick[] = [
-  { label: 'Primary language', title: 'Java', detail: 'Listed as primary on the resume • Oracle certified', palette: amber },
-  { label: 'The AI Original', title: 'PolicyGuard AI', detail: '500+ documents • 92% accuracy', palette: crimson },
-  { label: 'Biggest stage', title: 'Flipkart GRiD 7.0', detail: 'Semi-Finalist', palette: ocean },
-  { label: 'National selection', title: 'AlgoUniversity', detail: 'Tech Fellow', palette: violet },
-  { label: 'Academic high', title: 'Branch Topper', detail: '9.24 SGPA in AI & ML', palette: jade },
-  { label: 'Cloud credential', title: 'AWS AI Practitioner', detail: 'AWS Certified', palette: amber },
-  { label: 'Problems solved', title: '850+', detail: 'LeetCode 350+ • GFG 300+ • CodeChef 200+', palette: crimson },
-  { label: 'The training arc', title: '1 Year of FSD', detail: 'Technical Hub Pvt Ltd', palette: ocean },
-  { label: 'Database credential', title: 'MongoDB', detail: 'Certified Associate Developer', palette: jade },
-  { label: 'Current focus', title: 'System Design', detail: 'with Cloud (AWS) & Machine Learning', palette: violet },
+  { label: 'Primary language', title: 'Java', detail: 'Programming language listed on the resume', palette: amber },
+  { label: 'Current build', title: 'CampusConnect', detail: 'Multi-role student platform', palette: ocean },
+  { label: 'Energy project', title: 'Beyond the Plug', detail: 'Java-based energy audit model', palette: jade },
+  { label: 'Recognition', title: '2nd Place', detail: 'Technovation 2K25 Project Expo', palette: crimson },
+  { label: 'Leadership', title: '500+ Students', detail: 'Student coordination at MBU', palette: violet },
 ];
 
-/** Slides for the "▶ Play Intro" cinematic sequence. */
 export type IntroSlide = { kicker: string; title: string; lines: string[]; chips?: string[] };
 
 export const introSlides: IntroSlide[] = [
-  {
-    kicker: 'Education',
-    title: 'B.Tech · AI & ML',
-    lines: ['Aditya Engineering College, Surampalem', 'October 2023 – Present'],
-    chips: ['CGPA 9.10'],
-  },
-  {
-    kicker: 'Skills',
-    title: 'Java first.',
-    lines: ['Python, C, C++ · React, Node.js, Express.js', 'PostgreSQL, MongoDB, MySQL · Docker, REST, JWT'],
-    chips: ['Java', 'Python', 'React', 'Node.js', 'Docker', 'PostgreSQL'],
-  },
-  {
-    kicker: 'Training',
-    title: 'The Training Arc',
-    lines: ['One year of intensive Full‑Stack Development training', 'Trainee · Technical Hub Pvt Ltd · May 2025 – June 2026', 'Frontend · Backend · Databases · Deployment'],
-  },
-  {
-    kicker: 'Projects',
-    title: 'Three Originals',
-    lines: ['PolicyGuard AI — 500+ documents, 92% accuracy', 'Payment Gateway — 1,000+ transactions, 99.8% uptime', 'Multi-Tenant SaaS — 50+ tenants, zero unauthorized access'],
-  },
-  {
-    kicker: 'Achievements',
-    title: 'Top Moments',
-    lines: ['Tech Fellow — AlgoUniversity', 'Semi-Finalist — Flipkart GRiD 7.0', 'AIML Branch Topper — 9.24 SGPA'],
-  },
-  {
-    kicker: 'Certified',
-    title: '16 Certifications',
-    lines: ['AWS · MongoDB · Oracle · GitHub · Pearson', 'NPTEL · Cisco · Udemy'],
-  },
-  {
-    kicker: 'Current mission',
-    title: 'Now exploring',
-    lines: ['System Design · Cloud Computing (AWS) · Machine Learning'],
-  },
+  { kicker: 'Education', title: 'B.Tech · CSE', lines: ['Mohan Babu University, Tirupati', '2024 – 2028'], chips: ['CGPA 8.01'] },
+  { kicker: 'Skills', title: 'Java first.', lines: ['C++ · Python · JavaScript · React · Node.js', 'MySQL · Firebase · ESP32 · Raspberry Pi'], chips: ['Java', 'C++', 'Python', 'React', 'IoT'] },
+  { kicker: 'Experience', title: 'Smart Energy Audit', lines: ['Intern · Mohan Babu University · March 2025', 'Surveyed 1,000+ appliances across four floors'] },
+  { kicker: 'Projects', title: 'Building Useful Things', lines: ['CampusConnect — multi-role student platform', 'Beyond the Plug — Java energy calculation model', 'AI/ML output-prediction study — planning'] },
+  { kicker: 'Achievements', title: 'Top Moments', lines: ['2nd Place — Technovation 2K25 Project Expo', 'Student Coordinator — 500+ students'] },
+  { kicker: 'Current mission', title: 'Next Chapter', lines: ['Data Structures · Software Engineering · Cybersecurity · IoT'] },
 ];
 
 export type ProfileId = 'sushmita' | 'recruiter' | 'developer' | 'creative';
@@ -575,7 +378,7 @@ export const viewerProfiles: {
 }[] = [
   {
     id: 'sushmita',
-    name: 'Sushmita',
+    name: 'Harsha',
     blurb: 'The full series, in order',
     color: '#e5132b',
     order: ['about', 'journey', 'originals', 'picks', 'skills', 'moments', 'story'],
@@ -606,8 +409,8 @@ export const viewerProfiles: {
 export const sectionMeta: Record<SectionId, { nav: string; card: string; meta: string; palette: Palette }> = {
   about: { nav: 'About', card: 'About Me', meta: 'The Pilot • Education & training', palette: violet },
   journey: { nav: 'Journey', card: 'My Journey', meta: `${seasons.length} Seasons • ${seasons.reduce((n, s) => n + s.episodes.length, 0)} Episodes`, palette: amber },
-  originals: { nav: 'Originals', card: 'My Projects', meta: `${projects.length} Originals • 2026`, palette: crimson },
-  picks: { nav: 'Top Picks', card: 'Top Picks', meta: 'Top 10 from the resume', palette: jade },
+  originals: { nav: 'Originals', card: 'My Projects', meta: `${projects.length} Originals • 2025–2026`, palette: crimson },
+  picks: { nav: 'Top Picks', card: 'Top Picks', meta: 'Highlights from the resume', palette: jade },
   skills: { nav: 'Skills', card: 'My Skills', meta: `${skillCategories.length} Categories`, palette: ocean },
   moments: { nav: 'Moments', card: 'My Achievements', meta: `${achievements.length} Moments • ${certifications.length} Certifications`, palette: crimson },
   story: { nav: 'Resume', card: 'The Full Story', meta: 'Resume • View & download', palette: violet },
